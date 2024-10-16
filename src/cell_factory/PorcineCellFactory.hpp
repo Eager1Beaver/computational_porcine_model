@@ -334,7 +334,7 @@ public:
  
 		const double gkr = p_cell->GetParameter("membrane_rapid_delayed_rectifier_potassium_current_conductance");
         const double gkr_scaling = mpPorcineHeterogen->GetScaling(*pNode);
-        p_cell->SetParameter("membrane_rapid_delayed_rectifier_potassium_current_conductance", gkr_scaling*gkr);
+        p_cell->SetParameter("membrane_slow_delayed_rectifier_potassium_current_conductance", gkr_scaling*gks);
 		p_cell->SetTolerances(1e-4,1e-6);
 
 		return p_cell;
